@@ -4,9 +4,12 @@ public class PuzzleManager
 {
     private List<PuzzleNode> objectives;
 
+    private bool[] objectivesCompleted;
+
     public PuzzleManager(List<PuzzleNode> objectives)
     {
         this.objectives = objectives;
+        objectivesCompleted = new bool[objectives.Count];
     }
 
     public void parseAction(RoomAction action)
@@ -22,10 +25,16 @@ public class PuzzleManager
                 else
                 {
                     //objective completed.
+                    objectivesCompleted[i] = true;
                 }
             }
         }
 
+    }
+
+    public bool[] GetObjectivesCompleted()
+    {
+        return objectivesCompleted;
     }
 
 }
