@@ -959,7 +959,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2041691634}
+      - m_Target: {fileID: 0}
         m_MethodName: DecrementProgress
         m_Mode: 1
         m_Arguments:
@@ -1089,18 +1089,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035667010}
   m_CullTransparentMesh: 0
---- !u!114 &2041691634 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6984291130544522126, guid: 0e23f872772560c4c8f2891349c2b759,
-    type: 3}
-  m_PrefabInstance: {fileID: 4617342275807217976}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0c2a35bf8f74242a0f95c1b95fb1ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2060564021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1171,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2041691634}
+      - m_Target: {fileID: 0}
         m_MethodName: IncrementProgress
         m_Mode: 1
         m_Arguments:
@@ -1637,6 +1625,136 @@ PrefabInstance:
       propertyPath: ProgressBlobs.Array.data[4]
       value: 
       objectReference: {fileID: 1162830764}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobOnSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobOffSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: GreenButton
+      value: 
+      objectReference: {fileID: 2023553984}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: RedButton
+      value: 
+      objectReference: {fileID: 2084616945}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: GreenButtonOn
+      value: 
+      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: GreenButtonOff
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: RedButtonOn
+      value: 
+      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: RedButtonOff
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: SecondsToFlashGreenButton
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: SecondsToFlashRedButton
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobs.Array.data[0]
+      value: 
+      objectReference: {fileID: 5398196011836423077}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobs.Array.data[1]
+      value: 
+      objectReference: {fileID: 2145924788}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1480087904}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1101383252}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1162830764}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobOnSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobOnSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobOnSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobOnSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobOnSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobOffSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobOffSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobOffSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobOffSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 9044441621173772761, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: ProgressBlobOffSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e23f872772560c4c8f2891349c2b759, type: 3}
 --- !u!1001 &5398196011836423075
