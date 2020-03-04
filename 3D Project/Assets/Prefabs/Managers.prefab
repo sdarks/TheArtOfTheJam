@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2414184325733897622}
   - component: {fileID: 6984291130544522126}
+  - component: {fileID: -1515738408643335259}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -43,3 +44,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0c2a35bf8f74242a0f95c1b95fb1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GreenButton: {fileID: 0}
+  RedButton: {fileID: 0}
+  GreenButtonOn: {fileID: 0}
+  GreenButtonOff: {fileID: 0}
+  RedButtonOn: {fileID: 0}
+  RedButtonOff: {fileID: 0}
+  SecondsToFlashGreenButton: 0
+  SecondsToFlashRedButton: 0
+  ProgressBlobs: []
+  ProgressBlobOnSprites: []
+  ProgressBlobOffSprites: []
+  IncrementProgressOnSuccess: 1
+  DecrementProgressOnFail: 1
+  ResetProgressOnFail: 1
+  FlashLightOnSuccess: 1
+  FlashLightOnFail: 1
+--- !u!114 &-1515738408643335259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739948859533133081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b993792152902d4ca4fed0c561b7189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelNumber: 0
