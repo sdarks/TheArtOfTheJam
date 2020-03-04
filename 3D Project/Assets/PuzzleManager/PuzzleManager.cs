@@ -1,32 +1,31 @@
 ﻿﻿using System.Collections.Generic;
- 
- public class PuzzleManager
+
+public class PuzzleManager
+{
+    private List<PuzzleNode> objectives;
+
+    public PuzzleManager(List<PuzzleNode> objectives)
     {
-        private List<PuzzleNode> objectives;
+        this.objectives = objectives;
+    }
 
-        public PuzzleManager(List<PuzzleNode> objectives)
+    public void parseAction(RoomAction action)
+    {
+        for (int i = 0; i < objectives.Count; i++)
         {
-            this.objectives = objectives;
-        }
-
-        public void parseAction(RoomAction action)
-        {
-            for(int i = 0; i < objectives.Count; i++)
+            if (objectives[i].requirement.@equals(action))
             {
-                if (objectives[i].requirement.@equals(action))
+                if (objectives[i].next != null)
                 {
-                    if (objectives[i].next != null)
-                    {
-                        objectives[i] = objectives[i].next;
-                    }
-                    else
-                    {
-                        //objective completed.
-                    }
+                    objectives[i] = objectives[i].next;
+                }
+                else
+                {
+                    //objective completed.
                 }
             }
-            
         }
 
     }
+
 }

@@ -1,5 +1,4 @@
 ﻿﻿using System.Collections.Generic;
-using PuzzleManager;
 
 public class RoomAction
 {
@@ -17,7 +16,7 @@ public class RoomAction
         if (this.objects.Count != action.objects.Count) return false;
 
         if (this.actionType != action.actionType) return false;
-        
+
         for (int i = 0; i < objects.Count; i++)
         {
             if (this.objects[i] != action.objects[i]) return false;
@@ -26,4 +25,4 @@ public class RoomAction
         return true;
     }
 
- }
+}

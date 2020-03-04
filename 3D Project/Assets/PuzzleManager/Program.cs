@@ -1,61 +1,60 @@
 ﻿using System;
 using System.Collections.Generic;
-using PuzzleManager;
 
-    internal class Program
+internal class Program
+{
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Hello");
-            
-            RoomObjectBuilder objectBuilder = new RoomObjectBuilder();
-            RoomActionBuilder actionBuilder = new RoomActionBuilder();
+        Console.WriteLine("Hello");
 
-            RoomObject greenCard = objectBuilder.addProperty("colour", "green")
-                .addProperty("type", "card")
-                .build();
+        RoomObjectBuilder objectBuilder = new RoomObjectBuilder();
+        RoomActionBuilder actionBuilder = new RoomActionBuilder();
 
-            RoomObject redCard = objectBuilder.addProperty("colour", "red")
-                .addProperty("type", "card")
-                .build();
-            
-            
-            RoomObject blorginator = objectBuilder.addProperty("type", "container")
-                .addProperty("name", "blorginator")
-                .build();
-            
-            RoomObject fooblestopper = objectBuilder.addProperty("type", "container")
-                .addProperty("name", "fooblestopper")
-                .build();
+        RoomObject greenCard = objectBuilder.addProperty("colour", "green")
+            .addProperty("type", "card")
+            .build();
 
-            RoomAction action1 = actionBuilder.addObject(greenCard)
-                .addObject(blorginator)
-                .setAction("put in")
-                .build();
+        RoomObject redCard = objectBuilder.addProperty("colour", "red")
+            .addProperty("type", "card")
+            .build();
 
-            RoomAction action2 = actionBuilder.addObject(redCard)
-                .addObject(fooblestopper)
-                .setAction("put in")
-                .build();
 
-            List<PuzzleNode> objectives = new List<PuzzleNode>();
-            
-            PuzzleNode node = new PuzzleNode(null, null, action1);
-            
-            node = new PuzzleNode(null, node, action1);
-            node = new PuzzleNode(null, node, action1);
-            node = new PuzzleNode(null, node, action1);
-            node = new PuzzleNode(null, node, action1);
-            objectives.Add(node);
+        RoomObject blorginator = objectBuilder.addProperty("type", "container")
+            .addProperty("name", "blorginator")
+            .build();
 
-            node = new PuzzleNode(null, null, action2);
-            node = new PuzzleNode(null, node, action2);
-            node = new PuzzleNode(null, node, action2);
-            node = new PuzzleNode(null, node, action2);
-            node = new PuzzleNode(null, node, action2);
-            objectives.Add(node);
-            
-            PuzzleManager manager = new PuzzleManager(objectives);
+        RoomObject fooblestopper = objectBuilder.addProperty("type", "container")
+            .addProperty("name", "fooblestopper")
+            .build();
 
-        }
+        RoomAction action1 = actionBuilder.addObject(greenCard)
+            .addObject(blorginator)
+            .setAction("put in")
+            .build();
+
+        RoomAction action2 = actionBuilder.addObject(redCard)
+            .addObject(fooblestopper)
+            .setAction("put in")
+            .build();
+
+        List<PuzzleNode> objectives = new List<PuzzleNode>();
+
+        PuzzleNode node = new PuzzleNode(null, null, action1);
+
+        node = new PuzzleNode(null, node, action1);
+        node = new PuzzleNode(null, node, action1);
+        node = new PuzzleNode(null, node, action1);
+        node = new PuzzleNode(null, node, action1);
+        objectives.Add(node);
+
+        node = new PuzzleNode(null, null, action2);
+        node = new PuzzleNode(null, node, action2);
+        node = new PuzzleNode(null, node, action2);
+        node = new PuzzleNode(null, node, action2);
+        node = new PuzzleNode(null, node, action2);
+        objectives.Add(node);
+
+        PuzzleManager manager = new PuzzleManager(objectives);
+
     }
+}
