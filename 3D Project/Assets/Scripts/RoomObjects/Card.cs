@@ -4,28 +4,14 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    string cardName;
-    Color colour = Color.white;
+    public string cardName;
+    public Color colour = Color.white;
 
-
-
-    void Init()
+    void Init(string cardName, Color colour)
     {
+        this.cardName = cardName;
+        this.colour = colour;
 
-    }
-
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        GetComponentInChildren<SpriteRenderer>().color = colour;
     }
 }
