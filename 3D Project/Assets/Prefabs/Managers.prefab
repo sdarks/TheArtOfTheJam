@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6739948859533133081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baa950b26e7b49b4eaad24202bb21e6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ac5c5ba9a593d74e9b745850d5d4d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GreenButton: {fileID: 0}
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6739948859533133081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bb539c4a283dd741bc73ab520efce65, type: 3}
+  m_Script: {fileID: 11500000, guid: a0a62cb1bf78ccd458fe18fc035f38d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelNumber: 0

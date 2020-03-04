@@ -13,6 +13,7 @@ public class GrongleMachine : MonoBehaviour, MachineInterface
 
     public void machineProcess(GameObject processObject)
     {
+        // Debug.Log("Grongle Machine Attempting to process Card!");
         // Check that this is a card first, then if it is green
         // If it is send a action to the PuzzleManager
         Card c = processObject.GetComponent<Card>();
@@ -23,6 +24,7 @@ public class GrongleMachine : MonoBehaviour, MachineInterface
             {
                 RoomStateManager.inst.IncrementProgress();
                 PuzzleManagerMono.inst.puzzleManager.parseAction(placeGreenCardIntoGrongleMachine);
+                // Debug.Log("Grongle Machine activated!");
             }
         }
     }
