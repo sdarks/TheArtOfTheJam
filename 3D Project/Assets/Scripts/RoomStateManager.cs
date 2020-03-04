@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RoomStateManager : MonoBehaviour
 {
+
+	public static RoomStateManager inst;
 	public SpriteRenderer GreenButton;
 	public SpriteRenderer RedButton;
 	public Sprite GreenButtonOn;
@@ -96,6 +98,20 @@ public class RoomStateManager : MonoBehaviour
 			{
 				ProgressBlobs[i].sprite = ProgressBlobOffSprites[i];
 			}
+		}
+	}
+
+
+	private void Awake()
+	{
+		if(inst == null)
+		{
+			inst = this;
+		}
+		else
+		{
+			Destroy(this);
+			Debug.LogError("Multiple RoomStateManager detected, deleting the newest");
 		}
 	}
 
