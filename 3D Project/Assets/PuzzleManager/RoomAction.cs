@@ -11,7 +11,7 @@ public class RoomAction
         this.actionType = actionType;
     }
 
-    public bool equals(RoomAction action)
+    public bool satisfiedBy(RoomAction action)
     {
         if (this.objects.Count != action.objects.Count) return false;
 
@@ -19,7 +19,7 @@ public class RoomAction
 
         for (int i = 0; i < objects.Count; i++)
         {
-            if (this.objects[i] != action.objects[i]) return false;
+            if (!objects[i].satisfiedBy(action.objects[i])) return false;
         }
 
         return true;

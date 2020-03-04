@@ -9,5 +9,17 @@ public class RoomObject
     {
         this.properties = properties;
     }
+
+    public bool satisfiedBy(RoomObject o)
+    {
+        foreach(KeyValuePair<string, string> entry in properties)
+        {
+            if (!o.properties.ContainsKey(entry.Key)) return false;
+
+            if (properties[entry.Key] != o.properties[entry.Key]) return false;
+        }
+
+        return true;
+    }
 }
 

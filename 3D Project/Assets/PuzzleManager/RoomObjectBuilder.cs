@@ -17,7 +17,6 @@ public class RoomObjectBuilder
         RoomObject o = new RoomObject(objectProperties);
         objectProperties.Clear();
         return o;
-
     }
 
 

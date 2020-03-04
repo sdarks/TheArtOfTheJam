@@ -16,7 +16,7 @@ public class PuzzleManager
     {
         for (int i = 0; i < objectives.Count; i++)
         {
-            if (objectives[i].requirement.@equals(action))
+            if (objectives[i].requirement.satisfiedBy(action))
             {
                 if (objectives[i].next != null)
                 {
