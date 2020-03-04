@@ -25,7 +25,7 @@ namespace Tests
 
             List<PuzzleNode> objectives = new List<PuzzleNode>();
 
-            PuzzleNode objective = new PuzzleNode(null, null, action);             // This objectives have no requirements or previous needed actions
+            PuzzleNode objective = new PuzzleNode(null, null, action, ObjectiveType.Level);             // This objectives have no requirements or previous needed actions
             objectives.Add(objective);
 
 
@@ -63,8 +63,8 @@ namespace Tests
             List<PuzzleNode> objectives = new List<PuzzleNode>();
 
             // Create final objective first, then create Green card objective
-            PuzzleNode copyBlueCardObjective = new PuzzleNode(null, null, placeBlueCardIntoCopyMachine);
-            PuzzleNode createBlueCardObjective = new PuzzleNode(null, copyBlueCardObjective, placeGreenCardIntoColourMachine);
+            PuzzleNode copyBlueCardObjective = new PuzzleNode(null, null, placeBlueCardIntoCopyMachine, ObjectiveType.Level);
+            PuzzleNode createBlueCardObjective = new PuzzleNode(null, copyBlueCardObjective, placeGreenCardIntoColourMachine, ObjectiveType.Good);
             objectives.Add(createBlueCardObjective);
 
             PuzzleManager manager = new PuzzleManager(objectives);

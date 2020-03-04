@@ -9,6 +9,12 @@ public class PuzzleManagerMono : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PuzzleManager puzzleManager = new PuzzleManager(Levels.GetLevelObjectives(levelNumber));
+        Level level = Levels.GetLevel(levelNumber);
+
+        // Puzzle objectives are ready
+        PuzzleManager puzzleManager = new PuzzleManager(level.objectives);
+
+        // Create our RoomObjects now
+
     }
 }

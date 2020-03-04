@@ -8,24 +8,25 @@ public static class Levels
     static RoomObjectBuilder objectBuilder = new RoomObjectBuilder();
     static RoomActionBuilder actionBuilder = new RoomActionBuilder();
 
-    public static List<PuzzleNode> GetLevelObjectives(int levelNumber)
+    public static Level GetLevel(int levelNumber)
     {
         switch (levelNumber)
         {
             case 0:
                 return Level0();
             case 1:
-                return Level1();
+            // return Level1();
             case 2:
-                return Level2();
+            // return Level2();
             default:
                 return null;
         }
     }
 
     // Level 1 wants us to place three green cards into the "Grongle" machine and two blue cards into the "Blorble" machine
-    private static List<PuzzleNode> Level0()
+    private static Level Level0()
     {
+        List<RoomObject> roomObjects = new List<RoomObject>();
         List<PuzzleNode> objectives = new List<PuzzleNode>();
 
         // Level Setup
@@ -37,6 +38,14 @@ public static class Levels
         RoomObject grongleMachine = objectBuilder.addProperty("type", "container").addProperty("name", "Grongle").build();
         RoomObject blorbleMachine = objectBuilder.addProperty("type", "container").addProperty("name", "Blorble").build();
 
+        roomObjects.Add(greenCard);
+        roomObjects.Add(greenCard);
+        roomObjects.Add(greenCard);
+        roomObjects.Add(blueCard);
+        roomObjects.Add(blueCard);
+        roomObjects.Add(grongleMachine);
+        roomObjects.Add(blorbleMachine);
+
         // Actions that we are looking for
         // Level (These are all good as well)
         RoomAction placeGreenCardIntoGrongleMachine = actionBuilder.addObject(greenCard).addObject(grongleMachine).setAction("put in").build();
@@ -47,31 +56,34 @@ public static class Levels
         RoomAction placeBlueCardIntoGrongleMachine = actionBuilder.addObject(blueCard).addObject(grongleMachine).setAction("put in").build();
 
         // Build objectives
-        PuzzleNode obj1 = new PuzzleNode(null, null, placeGreenCardIntoGrongleMachine);
-        obj1 = new PuzzleNode(null, obj1, placeGreenCardIntoGrongleMachine);
-        obj1 = new PuzzleNode(null, obj1, placeGreenCardIntoGrongleMachine);
+        PuzzleNode obj1 = new PuzzleNode(null, null, placeGreenCardIntoGrongleMachine, ObjectiveType.Level);
+        obj1 = new PuzzleNode(null, obj1, placeGreenCardIntoGrongleMachine, ObjectiveType.Good);
+        obj1 = new PuzzleNode(null, obj1, placeGreenCardIntoGrongleMachine, ObjectiveType.Good);
         objectives.Add(obj1);
 
-        PuzzleNode obj2 = new PuzzleNode(null, null, placeBlueCardIntoBlorbleMachine);
-        obj2 = new PuzzleNode(null, obj2, placeBlueCardIntoBlorbleMachine);
+        PuzzleNode obj2 = new PuzzleNode(null, null, placeBlueCardIntoBlorbleMachine, ObjectiveType.Level);
+        obj2 = new PuzzleNode(null, obj2, placeBlueCardIntoBlorbleMachine, ObjectiveType.Good);
         objectives.Add(obj2);
 
+        // Bad objectives as well
+        PuzzleNode badObj1 = new PuzzleNode(null, null, placeGreenCardIntoBlorbleMachine, ObjectiveType.Bad);
+        objectives.Add(badObj1);
+        PuzzleNode badObj2 = new PuzzleNode(null, null, placeBlueCardIntoGrongleMachine, ObjectiveType.Bad);
+        objectives.Add(badObj2);
 
-        return objectives;
+        return new Level(roomObjects, objectives);
     }
 
     // Level 2 expects us to change each card to its complementary colour using the "ChangeColour" machine, then "Fax" it
-    private static List<PuzzleNode> Level1()
-    {
-        List<PuzzleNode> objectives = new List<PuzzleNode>();
-        return objectives;
-    }
+    // private static Level Level1()
+    // {
+    //      return new Level();
+    // }
 
     // level 3 wants us to add all the number cards together, then fax it
-    private static List<PuzzleNode> Level2()
-    {
-        List<PuzzleNode> objectives = new List<PuzzleNode>();
-        return objectives;
-    }
+    // private static Level Level2()
+    // {
+    //     return new Level();
+    // }
 
 }

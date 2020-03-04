@@ -39,20 +39,20 @@ internal class Program
 
         List<PuzzleNode> objectives = new List<PuzzleNode>();
 
-        PuzzleNode node = new PuzzleNode(null, null, action1);
+        // PuzzleNode node = new PuzzleNode(null, null, action1);
 
-        node = new PuzzleNode(null, node, action1);
-        node = new PuzzleNode(null, node, action1);
-        node = new PuzzleNode(null, node, action1);
-        node = new PuzzleNode(null, node, action1);
-        objectives.Add(node);
+        // node = new PuzzleNode(null, node, action1);
+        // node = new PuzzleNode(null, node, action1);
+        // node = new PuzzleNode(null, node, action1);
+        // node = new PuzzleNode(null, node, action1);
+        // objectives.Add(node);
 
-        node = new PuzzleNode(null, null, action2);
-        node = new PuzzleNode(null, node, action2);
-        node = new PuzzleNode(null, node, action2);
-        node = new PuzzleNode(null, node, action2);
-        node = new PuzzleNode(null, node, action2);
-        objectives.Add(node);
+        // node = new PuzzleNode(null, null, action2);
+        // node = new PuzzleNode(null, node, action2);
+        // node = new PuzzleNode(null, node, action2);
+        // node = new PuzzleNode(null, node, action2);
+        // node = new PuzzleNode(null, node, action2);
+        // objectives.Add(node);
 
         PuzzleManager manager = new PuzzleManager(objectives);
 
