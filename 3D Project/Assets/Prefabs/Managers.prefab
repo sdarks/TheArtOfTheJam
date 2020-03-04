@@ -43,3 +43,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0c2a35bf8f74242a0f95c1b95fb1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GreenButton: {fileID: 0}
+  RedButton: {fileID: 0}
+  GreenButtonOn: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  GreenButtonOff: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  RedButtonOn: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  RedButtonOff: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  SecondsToFlashGreenButton: 0.3
+  SecondsToFlashRedButton: 0.3
+  ProgressBlobs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  ProgressBlobOnSprites:
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  ProgressBlobOffSprites:
+  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  IncrementProgressOnSuccess: 1
+  DecrementProgressOnFail: 1
+  ResetProgressOnFail: 1
+  FlashLightOnSuccess: 1
+  FlashLightOnFail: 1
