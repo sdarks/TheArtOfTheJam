@@ -188,6 +188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenCard
       objectReference: {fileID: 0}
+    - target: {fileID: 8559733998665815952, guid: cb91c54cc2d232e46892c503ac157c51,
+        type: 3}
+      propertyPath: colour.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb91c54cc2d232e46892c503ac157c51, type: 3}
 --- !u!1001 &287005774
@@ -324,17 +329,17 @@ PrefabInstance:
     - target: {fileID: 3088820376890434937, guid: 8ce6b8824cd5c974399dbf3e6a2bc5d9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 3088820376890434937, guid: 8ce6b8824cd5c974399dbf3e6a2bc5d9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 3.18
       objectReference: {fileID: 0}
     - target: {fileID: 3088820376890434937, guid: 8ce6b8824cd5c974399dbf3e6a2bc5d9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: -1.18
       objectReference: {fileID: 0}
     - target: {fileID: 3088820376890434937, guid: 8ce6b8824cd5c974399dbf3e6a2bc5d9,
         type: 3}
@@ -468,7 +473,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &908837725
 PrefabInstance:
@@ -2163,7 +2168,7 @@ PrefabInstance:
     - target: {fileID: 9188578998355465085, guid: 2b5097d1bc29d7c43bd20e49c64e2925,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9188578998355465085, guid: 2b5097d1bc29d7c43bd20e49c64e2925,
         type: 3}
