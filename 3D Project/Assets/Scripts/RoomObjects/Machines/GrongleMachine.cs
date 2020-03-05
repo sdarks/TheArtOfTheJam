@@ -7,9 +7,7 @@ public class GrongleMachine : MonoBehaviour, MachineInterface
     static RoomObjectBuilder objectBuilder = new RoomObjectBuilder();
     static RoomActionBuilder actionBuilder = new RoomActionBuilder();
 
-    static RoomObject greenCard = objectBuilder.addProperty("type", "card").addProperty("colour", "green").build();
     static RoomObject grongleMachine = objectBuilder.addProperty("type", "container").addProperty("name", "Grongle").build();
-    static RoomAction placeGreenCardIntoGrongleMachine = actionBuilder.addObject(greenCard).addObject(grongleMachine).setAction("put in").build();
 
     public void machineProcess(GameObject processObject)
     {
@@ -18,13 +16,17 @@ public class GrongleMachine : MonoBehaviour, MachineInterface
         // If it is send a action to the PuzzleManager
         Card c = processObject.GetComponent<Card>();
 
+        // Build a card based on what we get
+
         if (c != null)
         {
+            RoomObject cardToProcess = objectBuilder.addProperty("type", "card").addProperty("colour", c.colour.ToString()).build();
+
+            RoomAction placeCardIntoGrongleMachine = actionBuilder.addObject(cardToProcess).addObject(grongleMachine).setAction("put in").build();
             if (c.colour == Color.green)
             {
-                RoomStateManager.inst.IncrementProgress();
-                PuzzleManagerMono.inst.puzzleManager.parseAction(placeGreenCardIntoGrongleMachine);
-                // Debug.Log("Grongle Machine activated!");
+                PuzzleManagerMono.inst.puzzleManager.parseAction(placeCardIntoGrongleMachine);
+                //Debug.Log("Grongle Machine activated!");
             }
         }
     }
