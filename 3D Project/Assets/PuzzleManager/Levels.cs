@@ -31,8 +31,8 @@ public static class Levels
 
         // Level Setup
         // Cards
-        RoomObject greenCard = objectBuilder.addProperty("type", "card").addProperty("colour", "green").build();
-        RoomObject blueCard = objectBuilder.addProperty("type", "card").addProperty("colour", "blue").build();
+        RoomObject greenCard = objectBuilder.addProperty("type", "card").addProperty("colour", Color.green.ToString()).build();
+        RoomObject blueCard = objectBuilder.addProperty("type", "card").addProperty("colour", Color.blue.ToString()).build();
 
         // Machines
         RoomObject grongleMachine = objectBuilder.addProperty("type", "container").addProperty("name", "Grongle").build();
