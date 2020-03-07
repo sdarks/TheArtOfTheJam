@@ -25,20 +25,28 @@ public class MainController : MonoBehaviour
         
         if (heldCard != null)
         {
-            if (heldCard.cardReceiver != null)
+
+            if (!Input.GetMouseButton(0))
+            {
+                if (heldCard.cardReceiver != null)
+                {
+                    heldCard.cardReceiver.receiveCard(heldCard);
+                }
+                else
+                {
+                    heldCard.transform.position = heldCard.tablePosition.transform.position;
+                    heldCard.transform.eulerAngles = new Vector3(90, 0, 90);
+                    heldCard.GetComponent<BoxCollider>().enabled = true;
+                    heldCard = null;
+                }
+            }
+            else if (heldCard.cardReceiver != null)
             {
                 var heldCardPosition = heldCard.transform;
                 heldCardPosition.position =
                     heldCard.cardReceiver.transform.position + heldCard.cardReceiver.cardPosition;
                 heldCardPosition.eulerAngles = heldCard.cardReceiver.cardRotation;
             } 
-            else if (!Input.GetMouseButton(0))
-            {
-                heldCard.transform.position = heldCard.tablePosition.transform.position;
-                heldCard.transform.eulerAngles = new Vector3(90,0,90);
-                heldCard.GetComponent<BoxCollider>().enabled = true;
-                heldCard = null;
-            }
             else
             {
                 Vector3 mousePosition = Input.mousePosition;
