@@ -983,6 +983,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &740970763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5785536104577479212, guid: de316412a4872c44886633104f23696a,
+    type: 3}
+  m_PrefabInstance: {fileID: 28756573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &740970766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740970763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac5017407d745faac72a3c551ad1f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardPosition: {x: 0, y: -1.2, z: 1}
+  cardRotation: {x: 90, y: 90, z: 90}
+--- !u!65 &740970767
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740970763}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 1, z: 0.20000005}
+  m_Center: {x: 0, y: -1.25, z: 0}
 --- !u!1001 &751449951
 PrefabInstance:
   m_ObjectHideFlags: 0
