@@ -16,9 +16,9 @@ MonoBehaviour:
   buzzInterval: 0.3
   renderer: {fileID: 7679249056471474382}
   GuyRenderer: {fileID: 5459592339545585568}
-  buzzSprite: {fileID: 21300000, guid: e77964a32d8cfb24188c67f6b160fe9b, type: 3}
+  buzzSprite: {fileID: 21300000, guid: 2bfe4ddd5c9286b47b4c71a5d2acf5ce, type: 3}
   happyGuySprite: {fileID: 21300000, guid: 6e097b1d881b5bf47ac543898ea11f12, type: 3}
-  BuzzerSound: {fileID: 0}
+  BuzzerSound: {fileID: 8300000, guid: 522b6f1c42d09e34b8194248fa3ac2f7, type: 3}
 --- !u!1 &9222789319439588863
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,7 +70,7 @@ PrefabInstance:
         type: 3}
       propertyPath: goodBuzzer
       value: 
-      objectReference: {fileID: 4403491160462444961}
+      objectReference: {fileID: 1878688952}
     - target: {fileID: 1883777298143631668, guid: 0e23f872772560c4c8f2891349c2b759,
         type: 3}
       propertyPath: CardInsertSound
@@ -561,7 +561,7 @@ PrefabInstance:
     - target: {fileID: 2451495239047456169, guid: c45aea4b9aaccda4990bcffcbd04eabb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 2451495239047456169, guid: c45aea4b9aaccda4990bcffcbd04eabb,
         type: 3}
@@ -608,6 +608,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2451495239047456169, guid: c45aea4b9aaccda4990bcffcbd04eabb,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451495239047456169, guid: c45aea4b9aaccda4990bcffcbd04eabb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.125
+      objectReference: {fileID: 0}
     - target: {fileID: 8236854476561211225, guid: c45aea4b9aaccda4990bcffcbd04eabb,
         type: 3}
       propertyPath: BuzzerSound
@@ -623,6 +633,12 @@ PrefabInstance:
       propertyPath: happyGuySprite
       value: 
       objectReference: {fileID: 21300000, guid: 8869a30ffe096e846972f61b8c00d700,
+        type: 3}
+    - target: {fileID: 8236854476561211225, guid: c45aea4b9aaccda4990bcffcbd04eabb,
+        type: 3}
+      propertyPath: buzzSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 299407e699cc8a648991cc15010a6d26,
         type: 3}
     m_RemovedComponents:
     - {fileID: 8236854476561211224, guid: c45aea4b9aaccda4990bcffcbd04eabb, type: 3}
