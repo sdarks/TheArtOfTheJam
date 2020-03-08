@@ -16,6 +16,7 @@ public class MouseHandler : UnityEngine.MonoBehaviour
                 if (cardBehaviour != null)
                 {
                     MainController.controller.holdCard((Card) cardBehaviour);
+					RoomStateManager.inst.PlayMouseDownSound();
                 }
             }
         }
@@ -36,7 +37,10 @@ public class MouseHandler : UnityEngine.MonoBehaviour
                 }
             }
 
-            if (!hitReceiver) MainController.controller.heldCard.CardReceiver = null;
+			if (!hitReceiver)
+			{
+				MainController.controller.heldCard.CardReceiver = null;
+			}
         }
         
 

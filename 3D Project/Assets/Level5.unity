@@ -569,6 +569,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ff0fad06121bfe4b9c1022cd71d8978, type: 3}
+--- !u!212 &840252708 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7679249056471474382, guid: 4939d2dc319250e4086ff1053d1d904f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5842735401957059168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &955084996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -576,6 +582,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1030460965, guid: 0e23f872772560c4c8f2891349c2b759, type: 3}
+      propertyPath: renderer
+      value: 
+      objectReference: {fileID: 840252708}
     - target: {fileID: 1883777298143631668, guid: 0e23f872772560c4c8f2891349c2b759,
         type: 3}
       propertyPath: failBuzzer
@@ -583,9 +593,19 @@ PrefabInstance:
       objectReference: {fileID: 5842735401957059169}
     - target: {fileID: 1883777298143631668, guid: 0e23f872772560c4c8f2891349c2b759,
         type: 3}
-      propertyPath: goodBuzzer
+      propertyPath: CameraAudio
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 963194229}
+    - target: {fileID: 1883777298143631668, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: MouseUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a6403b86340faf4ca88debed80e5fbe, type: 3}
+    - target: {fileID: 1883777298143631668, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: MouseDownSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 60518f89c3122e54ab83940b94eccb20, type: 3}
     - target: {fileID: 2414184325733897622, guid: 0e23f872772560c4c8f2891349c2b759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -739,10 +759,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 23bfb482e0162624286e066fdc456154, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 29a75c02a17890946a7d1e5d4946a4be, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

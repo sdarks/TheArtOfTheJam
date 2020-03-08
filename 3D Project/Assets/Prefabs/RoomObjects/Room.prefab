@@ -174,7 +174,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8236854476561211225, guid: c45aea4b9aaccda4990bcffcbd04eabb,
+        type: 3}
+      propertyPath: BuzzerSound
+      value: 
+      objectReference: {fileID: 8300000, guid: bbafb17fd8c6d2b42a42d91739c60b71, type: 3}
+    m_RemovedComponents:
+    - {fileID: 8236854476561211224, guid: c45aea4b9aaccda4990bcffcbd04eabb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c45aea4b9aaccda4990bcffcbd04eabb, type: 3}
 --- !u!4 &7878499502390752081 stripped
 Transform:

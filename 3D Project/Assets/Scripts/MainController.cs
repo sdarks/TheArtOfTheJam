@@ -51,15 +51,17 @@ public class MainController : MonoBehaviour
                 if (heldCard.CardReceiver != null)
                 {
                     PuzzleManagerResponse response = heldCard.CardReceiver.receiveCard(heldCard);
-
-                    switch (response.ResponseType)
+					RoomStateManager.inst.InsertCardSound();
+					switch (response.ResponseType)
                     {
                         case PuzzleManagerResponse.Type.Delete:
                             GameObject.Destroy(heldCard.gameObject);
+							RoomStateManager.inst.GoodAction();
                             break;
                         case PuzzleManagerResponse.Type.Change:
                             changeCard(heldCard, heldCard.CardReceiver, response);
-                            break;
+							RoomStateManager.inst.GoodAction();
+							break;
                         case PuzzleManagerResponse.Type.Fail:
                             RoomStateManager.inst.invalidAction();
                             releaseCard();
@@ -120,7 +122,8 @@ public class MainController : MonoBehaviour
         heldCard.transform.eulerAngles = new Vector3(90, 0, 90);
         heldCard.Collider.enabled = true;
         heldCard = null;
-    }
+		RoomStateManager.inst.PlayMouseUpSound();
+	}
 
     public void holdCard(Card c)
     {
