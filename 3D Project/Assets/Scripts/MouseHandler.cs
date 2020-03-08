@@ -31,12 +31,12 @@ public class MouseHandler : UnityEngine.MonoBehaviour
                 MonoBehaviour receiver = hit.collider.gameObject.GetComponent<CardReceiver>();
                 if (receiver != null)
                 {
-                    MainController.controller.heldCard.cardReceiver = (CardReceiver) receiver;
+                    MainController.controller.heldCard.CardReceiver = (CardReceiver) receiver;
                     hitReceiver = true;
                 }
             }
 
-            if (!hitReceiver) MainController.controller.heldCard.cardReceiver = null;
+            if (!hitReceiver) MainController.controller.heldCard.CardReceiver = null;
         }
         
 
