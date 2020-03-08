@@ -632,7 +632,7 @@ PrefabInstance:
         type: 3}
       propertyPath: happyGuySprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8869a30ffe096e846972f61b8c00d700,
+      objectReference: {fileID: 21300000, guid: 170efc67c39cfba4eb665dd3012ded70,
         type: 3}
     - target: {fileID: 8236854476561211225, guid: c45aea4b9aaccda4990bcffcbd04eabb,
         type: 3}
@@ -745,6 +745,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772855693346390591, guid: 03eddc818ec5a744b9b73c2e62fad7a5,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.2392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772855693346390591, guid: 03eddc818ec5a744b9b73c2e62fad7a5,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.2392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772855693346390591, guid: 03eddc818ec5a744b9b73c2e62fad7a5,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.2392157
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03eddc818ec5a744b9b73c2e62fad7a5, type: 3}
