@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: MouseDownSound
       value: 
       objectReference: {fileID: 8300000, guid: 4a6403b86340faf4ca88debed80e5fbe, type: 3}
+    - target: {fileID: 1883777298143631668, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: CameraAudio
+      value: 
+      objectReference: {fileID: 920882448366485683}
     - target: {fileID: 2414184325733897622, guid: 0e23f872772560c4c8f2891349c2b759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -670,6 +675,12 @@ PrefabInstance:
 --- !u!4 &920882448366485682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6772855693346390584, guid: 03eddc818ec5a744b9b73c2e62fad7a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 5852891620992746122}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &920882448366485683 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6772855693346390585, guid: 03eddc818ec5a744b9b73c2e62fad7a5,
     type: 3}
   m_PrefabInstance: {fileID: 5852891620992746122}
   m_PrefabAsset: {fileID: 0}
