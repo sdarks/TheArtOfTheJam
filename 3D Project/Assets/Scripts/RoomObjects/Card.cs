@@ -6,7 +6,6 @@ using UnityEngine.Experimental.TerrainAPI;
 
 public class Card : MonoBehaviour
 {
-    public string cardName;
     public CardPosition tablePosition;
 
     private CardReceiver cardReceiver;
