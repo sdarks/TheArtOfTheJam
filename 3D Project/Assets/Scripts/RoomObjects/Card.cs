@@ -8,7 +8,7 @@ public class Card : MonoBehaviour
 {
     public string cardName;
     public CardPosition tablePosition;
-    
+
     private CardReceiver cardReceiver;
     public CardReceiver CardReceiver
     {
@@ -18,7 +18,7 @@ public class Card : MonoBehaviour
 
     private CardOutputter cardOutputter;
     public CardOutputter CardOutputter => cardOutputter;
-    
+
     public Colour colour;
     public int number = 0;
     private BoxCollider collider;
@@ -39,12 +39,12 @@ public class Card : MonoBehaviour
         white
     };
 
-    
+
     private void Awake()
     {
         this.transform.position = tablePosition.transform.position;
         collider = GetComponent<BoxCollider>();
-        
+
         generateRoomObject();
 
     }
@@ -59,5 +59,5 @@ public class Card : MonoBehaviour
 
         roomObject = builder.build();
     }
-    
+
 }
