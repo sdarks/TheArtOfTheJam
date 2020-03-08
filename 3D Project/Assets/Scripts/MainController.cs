@@ -15,6 +15,7 @@ public class MainController : MonoBehaviour
 
     public List<Sprite> cardSprites;
 
+
     public void Awake()
     {
         if (controller == null)
