@@ -104,7 +104,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   cardSprites:
-  - {fileID: 21300000, guid: a47f8faee18f7564abb1a8e5425847b3, type: 3}
+  - {fileID: 21300000, guid: 319d3746ecad7c24ba9c505f0e0011a3, type: 3}
   - {fileID: 21300000, guid: 9094de039a73e6f48843230424fb7abe, type: 3}
   - {fileID: 21300000, guid: 072ad0121b5e03b468337f55b4a616ed, type: 3}
   - {fileID: 21300000, guid: d9bd047ae34cfd24b9a724eab2d500ec, type: 3}

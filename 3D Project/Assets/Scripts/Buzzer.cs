@@ -16,10 +16,12 @@ public class Buzzer : MonoBehaviour
     private DateTime timeOfBuzz;
 
     public SpriteRenderer renderer;
+	public SpriteRenderer GuyRenderer;
 
     private Sprite normalSprite;
     public Sprite buzzSprite;
-
+	private Sprite normalGuySprite;
+	public Sprite happyGuySprite;
 
 	public AudioClip BuzzerSound;
 
@@ -29,6 +31,7 @@ public class Buzzer : MonoBehaviour
 		if(!renderer)
 			renderer = GetComponent<SpriteRenderer>();
         normalSprite = renderer.sprite;
+		normalGuySprite = GuyRenderer.sprite;
     }
 
     void FixedUpdate()
@@ -44,11 +47,13 @@ public class Buzzer : MonoBehaviour
                 if (!buzzing)
                 {
                     renderer.sprite = buzzSprite;
+					GuyRenderer.sprite = happyGuySprite;
                     buzzing = true;
                 }
                 else
                 {
                     renderer.sprite = normalSprite;
+					GuyRenderer.sprite = normalGuySprite;
                     buzzing = false;
                 }
             }
@@ -60,6 +65,7 @@ public class Buzzer : MonoBehaviour
                 {
                     buzzing = false;
                     renderer.sprite = normalSprite;
+					GuyRenderer.sprite = normalGuySprite;
                 }
             }
         }
