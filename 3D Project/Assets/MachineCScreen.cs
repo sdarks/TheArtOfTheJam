@@ -37,7 +37,6 @@ public class MachineCScreen : MonoBehaviour
             // Number Mode
             screenNumber.text = PuzzleManagerMono.inst.puzzleManager.machineCNumberPublic.ToString();
             screen.color = Color.black;
-
         }
     }
 }
