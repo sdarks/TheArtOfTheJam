@@ -18,6 +18,17 @@ public class MouseHandler : UnityEngine.MonoBehaviour
                     MainController.controller.holdCard((Card) cardBehaviour);
 					RoomStateManager.inst.PlayMouseDownSound();
                 }
+                else
+                {
+                    MonoBehaviour machineButton = hit.collider.gameObject.GetComponent<MachineButton>();
+                    if (machineButton != null)
+                    {
+                        MachineButton machineButtonCast = (MachineButton) machineButton;
+                        machineButtonCast.on = !machineButtonCast.@on;
+                        PuzzleManagerMono.inst.puzzleManager.switchMode(machineButtonCast.on);
+                        print(machineButtonCast.on);
+                    }
+                }
             }
         }
 

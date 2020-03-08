@@ -10,10 +10,12 @@
     private bool cardAdded = false;
     
     private bool ascending = true;
-    
+
+    public bool Ascending => @ascending;
+
     private string machineCColour = "";
     private int machineCNumber = 0;
-    
+
     private int machineCMode = 1;
 
     
@@ -174,6 +176,12 @@
         if (responseType == PuzzleManagerResponse.Type.Change) return new PuzzleManagerResponse(responseType, changeMap);
         else return new PuzzleManagerResponse(responseType);
 
+    }
+
+    public void switchMode(bool b)
+    {
+        if (b) machineCMode = 1;
+        else machineCMode = 2;
     }
 
     public bool[] GetObjectivesCompleted()

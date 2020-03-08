@@ -62,6 +62,7 @@ public class MainController : MonoBehaviour
 					RoomStateManager.inst.InsertCardSound();
 					switch (response.ResponseType)
                     {
+                        //PuzzleManagerMono.inst.puzzleManager.Ascending
                         case PuzzleManagerResponse.Type.Delete:
                             GameObject.Destroy(heldCard.gameObject);
 							RoomStateManager.inst.GoodAction();
