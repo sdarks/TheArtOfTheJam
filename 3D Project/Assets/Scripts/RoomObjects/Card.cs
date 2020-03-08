@@ -6,9 +6,8 @@ using UnityEngine.Experimental.TerrainAPI;
 
 public class Card : MonoBehaviour
 {
-    public string cardName;
     public CardPosition tablePosition;
-    
+
     private CardReceiver cardReceiver;
     public CardReceiver CardReceiver
     {
@@ -22,7 +21,7 @@ public class Card : MonoBehaviour
         get => cardOutputter;
         set => cardOutputter = value;
     }
-    
+
     static public Dictionary<string, Color> colourMap = new Dictionary<string, Color>();
     static public List<Sprite> cardNumberSprites = new List<Sprite>();
 
@@ -50,13 +49,13 @@ public class Card : MonoBehaviour
         white
     };
 
-    
+
     private void Awake()
     {
         this.transform.position = tablePosition.transform.position;
         collider = GetComponent<BoxCollider>();
         renderer = GetComponent<SpriteRenderer>();
-        
+
         generateRoomObject();
 
     }
@@ -84,14 +83,14 @@ public class Card : MonoBehaviour
 
     public void changeCard(Dictionary<string, string> changeMap)
     {
-        foreach(KeyValuePair<string, string> pair in changeMap)
+        foreach (KeyValuePair<string, string> pair in changeMap)
         {
             roomObject.properties[pair.Key] = pair.Value;
         }
 
         if (changeMap.ContainsKey("colour"))
         {
-            colour = (Colour) Enum.Parse(typeof(Colour), changeMap["colour"]);
+            colour = (Colour)Enum.Parse(typeof(Colour), changeMap["colour"]);
             renderer.color = Card.colourMap[changeMap["colour"]];
         }
 
@@ -101,5 +100,5 @@ public class Card : MonoBehaviour
             changeNumberSprite(number);
         }
     }
-    
+
 }
