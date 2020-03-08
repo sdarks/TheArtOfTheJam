@@ -74,6 +74,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   failBuzzer: {fileID: 0}
   goodBuzzer: {fileID: 0}
+  CameraAudio: {fileID: 0}
+  CardInsertSound: {fileID: 0}
+  MouseUpSound: {fileID: 0}
+  MouseDownSound: {fileID: 0}
+  BuzzDelay: 0.5
 --- !u!114 &2920850238874992500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +92,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heldCard: {fileID: 0}
+  cardPositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   cardSprites:
   - {fileID: 21300000, guid: a47f8faee18f7564abb1a8e5425847b3, type: 3}
   - {fileID: 21300000, guid: 9094de039a73e6f48843230424fb7abe, type: 3}

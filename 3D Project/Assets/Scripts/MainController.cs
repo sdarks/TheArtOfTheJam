@@ -9,7 +9,7 @@ public class MainController : MonoBehaviour
     public static MainController controller;
     public Card heldCard;
 
-    private List<CardPosition> cardPositions = new List<CardPosition>();
+    public List<CardPosition> cardPositions = new List<CardPosition>();
 
     private Dictionary<CardPosition, Card> cardMap;
 
@@ -28,11 +28,9 @@ public class MainController : MonoBehaviour
             Debug.Log(
                 "Error: MainController created while MainController.controller was not null. Deleting this instance.");
         }
-
-        cardPositions.Capacity = 10;
-        foreach (CardPosition pos in GetComponents<CardPosition>())
+        
+        foreach (CardPosition pos in cardPositions)
         {
-            cardPositions[pos.index] = pos;
             cardMap[pos] = null;
         }
 
@@ -121,10 +119,22 @@ public class MainController : MonoBehaviour
     {
         card.tablePosition = null;
         card.CardOutputter = receiver.gameObject.GetComponent<CardOutputter>();
+        if (card.CardOutputter)
+        {
+            card.transform.position = card.CardOutputter.transform.position+card.CardOutputter.cardPosition;
+            card.transform.eulerAngles = new Vector3(90, 0, 90);
+            card.Collider.enabled = true;
+            heldCard = null;
+        }
+        card.changeCard(response.ChangeMap);
     }
 
     public void releaseCard()
     {
+        if (heldCard.tablePosition == null)
+        {
+            addNewCard(heldCard);
+        }
         heldCard.transform.position = heldCard.tablePosition.transform.position;
         heldCard.transform.eulerAngles = new Vector3(90, 0, 90);
         heldCard.Collider.enabled = true;
@@ -138,6 +148,7 @@ public class MainController : MonoBehaviour
         {
             heldCard = c;
             heldCard.Collider.enabled = false;
+            heldCard.CardOutputter = null;
         }
         else
         {
