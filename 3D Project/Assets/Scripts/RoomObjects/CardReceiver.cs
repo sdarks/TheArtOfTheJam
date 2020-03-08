@@ -16,11 +16,18 @@ public class CardReceiver : MonoBehaviour
         objectBuilder = new RoomObjectBuilder();
     }
 
-    public bool receiveCard(Card c)
+    public PuzzleManagerResponse receiveCard(Card c)
     {
         RoomObject machine = objectBuilder.addProperty("type", "machine").addProperty("name", gameObject.name).build();
 
-        RoomObject card = objectBuilder.addProperty("type", "card").addProperty("colour", c.colour.ToString()).build();
+        objectBuilder
+            .addProperty("type", "card")
+            .addProperty("colour", c.colour.ToString());
+        if (c.number > 0)
+        {
+            objectBuilder.addProperty("number", c.number.ToString());
+        }
+        RoomObject card = objectBuilder.build();
 
         RoomAction placeCardIntoMachine = actionBuilder.addObject(card).addObject(machine).setAction("put in").build();
         
