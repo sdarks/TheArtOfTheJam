@@ -177,6 +177,12 @@ PrefabInstance:
       propertyPath: cardPositions.Array.data[9]
       value: 
       objectReference: {fileID: 3448541587611006779}
+    - target: {fileID: 2920850238874992500, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: cardSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 319d3746ecad7c24ba9c505f0e0011a3,
+        type: 3}
     - target: {fileID: 6739948859533133081, guid: 0e23f872772560c4c8f2891349c2b759,
         type: 3}
       propertyPath: m_Name
