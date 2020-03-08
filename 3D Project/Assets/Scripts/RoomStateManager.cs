@@ -6,99 +6,99 @@ using UnityEngine.SceneManagement; //So you can use SceneManager
 public class RoomStateManager : MonoBehaviour
 {
 
-	public static RoomStateManager inst;
+    public static RoomStateManager inst;
 
-	public Buzzer failBuzzer;
-	public Buzzer goodBuzzer;
+    public Buzzer failBuzzer;
+    public Buzzer goodBuzzer;
 
-	public AudioSource CameraAudio;
+    public AudioSource CameraAudio;
 
-	public AudioClip CardInsertSound;
-	public AudioClip MouseUpSound;
-	public AudioClip MouseDownSound;
+    public AudioClip CardInsertSound;
+    public AudioClip MouseUpSound;
+    public AudioClip MouseDownSound;
 
-	public SpriteRenderer PlayRenderer;
-	public Sprite PlaySprite;
-	public Sprite ReverseSprite;
+    public SpriteRenderer PlayRenderer;
+    public Sprite PlaySprite;
+    public Sprite ReverseSprite;
 
-	public float BuzzDelay = 0.5f;
-	IEnumerator BuzzAfterTime(float time, Buzzer buzz)
-	{
-		yield return new WaitForSeconds(time);
-
-		buzz.startBuzz();
-
-	}
-	private void Awake()
-	{
-		if(inst == null)
-		{
-			inst = this;
-		}
-		else
-		{
-			Destroy(this);
-			Debug.LogError("Multiple RoomStateManager detected, deleting the newest");
-		}
-
-		
-	}
-
-	public void SetPlayReverse(bool reverse)
-	{
-		PlayRenderer.enabled = true;
-		PlayRenderer.sprite = reverse ? ReverseSprite : PlaySprite;
-	}
-
-	public void ResetLevel()
-	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-	}
-	// Start is called before the first frame update
-	void Start()
+    public float BuzzDelay = 0.5f;
+    IEnumerator BuzzAfterTime(float time, Buzzer buzz)
     {
-        
+        yield return new WaitForSeconds(time);
+
+        buzz.startBuzz();
+
+    }
+    private void Awake()
+    {
+        if (inst == null)
+        {
+            inst = this;
+        }
+        else
+        {
+            Destroy(this);
+            Debug.LogError("Multiple RoomStateManager detected, deleting the newest");
+        }
+
+
     }
 
-	public void PlayMouseDownSound()
-	{
-		CameraAudio.PlayOneShot(MouseDownSound);
-	}
+    public void SetPlayReverse(bool reverse)
+    {
+        PlayRenderer.enabled = true;
+        PlayRenderer.sprite = reverse ? PlaySprite : ReverseSprite;
+    }
 
-	public void PlayMouseUpSound()
-	{
-		CameraAudio.PlayOneShot(MouseUpSound);
-	}
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
 
-	public void InsertCardSound()
-	{
-		CameraAudio.PlayOneShot(CardInsertSound);
-	}
+    }
 
-	public void GoodAction()
-	{
-		StartCoroutine(BuzzAfterTime(BuzzDelay, goodBuzzer));
-	}
+    public void PlayMouseDownSound()
+    {
+        CameraAudio.PlayOneShot(MouseDownSound);
+    }
 
-	public void invalidAction()
-	{
-		StartCoroutine(BuzzAfterTime(BuzzDelay, failBuzzer));
-	}
-	// Update is called once per frame
+    public void PlayMouseUpSound()
+    {
+        CameraAudio.PlayOneShot(MouseUpSound);
+    }
+
+    public void InsertCardSound()
+    {
+        CameraAudio.PlayOneShot(CardInsertSound);
+    }
+
+    public void GoodAction()
+    {
+        StartCoroutine(BuzzAfterTime(BuzzDelay, goodBuzzer));
+    }
+
+    public void invalidAction()
+    {
+        StartCoroutine(BuzzAfterTime(BuzzDelay, failBuzzer));
+    }
+    // Update is called once per frame
     void Update()
     {
-  //       if(FlashingGreenButton && (Time.time > TimeStartGreenButtonFlash + SecondsToFlashGreenButton))
-		// {
-		// 	FlashingGreenButton = false;
-		// 	TimeStartGreenButtonFlash = 0;
-		// 	GreenButton.sprite = GreenButtonOff;
-		// }
-  //
-		// if (FlashingRedButton && (Time.time > TimeStartRedButtonFlash + SecondsToFlashRedButton))
-		// {
-		// 	FlashingRedButton = false;
-		// 	TimeStartRedButtonFlash = 0;
-		// 	RedButton.sprite = RedButtonOff;
-		// }
-	}
+        //       if(FlashingGreenButton && (Time.time > TimeStartGreenButtonFlash + SecondsToFlashGreenButton))
+        // {
+        // 	FlashingGreenButton = false;
+        // 	TimeStartGreenButtonFlash = 0;
+        // 	GreenButton.sprite = GreenButtonOff;
+        // }
+        //
+        // if (FlashingRedButton && (Time.time > TimeStartRedButtonFlash + SecondsToFlashRedButton))
+        // {
+        // 	FlashingRedButton = false;
+        // 	TimeStartRedButtonFlash = 0;
+        // 	RedButton.sprite = RedButtonOff;
+        // }
+    }
 }
