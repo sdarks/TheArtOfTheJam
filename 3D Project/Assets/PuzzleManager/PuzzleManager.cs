@@ -203,4 +203,9 @@ public class PuzzleManager
         return null;
     }
 
+    public bool machineOn(string machine)
+    {
+        return machineStatusMap[machine];
+    }
+
 }
