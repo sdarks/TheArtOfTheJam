@@ -176,6 +176,22 @@
 
     }
 
+    public void switchMode(bool b)
+    {
+        if (b) machineCMode = 1;
+        else machineCMode = 2;
+    }
+
+    public Color GetMachineCColor()
+    {
+        if (machineCColour == "")
+        {
+            return Color.black;
+            
+        }
+        return Card.colourMap[machineCColour];
+    }
+
     public bool[] GetObjectivesCompleted()
     {
         //depreciated
