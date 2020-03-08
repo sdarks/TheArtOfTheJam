@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: 
-  tablePosition: {fileID: 74401726}
+  tablePosition: {fileID: 0}
   colour: 0
   number: 3
 --- !u!65 &244814131
@@ -571,7 +571,7 @@ PrefabInstance:
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.94
+      value: -4.64
       objectReference: {fileID: 0}
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
@@ -581,7 +581,7 @@ PrefabInstance:
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.23
+      value: -3.34
       objectReference: {fileID: 0}
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: 
-  tablePosition: {fileID: 550998566}
+  tablePosition: {fileID: 0}
   colour: 0
   number: 2
 --- !u!65 &399200754
@@ -831,12 +831,12 @@ PrefabInstance:
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.733
       objectReference: {fileID: 0}
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.08
+      value: -0.875
       objectReference: {fileID: 0}
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
@@ -886,7 +886,7 @@ PrefabInstance:
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
@@ -955,7 +955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: 
-  tablePosition: {fileID: 362883416}
+  tablePosition: {fileID: 0}
   colour: 1
   number: 4
 --- !u!65 &515992404
@@ -980,6 +980,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 550998567}
+  - component: {fileID: 550998568}
   m_Layer: 0
   m_Name: CardPosition1
   m_TagString: Untagged
@@ -1001,6 +1002,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &550998568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550998566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c8fceb6f6344e9a21d38bbf5d23aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
 --- !u!1 &582212978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,6 +1139,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 1, z: 0.20000005}
   m_Center: {x: 0, y: -1.25, z: 0}
+--- !u!114 &683722001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683721996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2e6d50196a448dbb9c033d5262cce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardPosition: {x: 0, y: -0.5, z: 1}
+  cardRotation: {x: 90, y: 90, z: 90}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,13 +1530,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.11320323, y: 0, z: 0, w: 0.9935719}
-  m_LocalPosition: {x: 0, y: 3, z: -8}
+  m_LocalRotation: {x: 0.19936788, y: 0, z: 0, w: 0.97992474}
+  m_LocalPosition: {x: 0, y: 3, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 13, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 23, y: 0, z: 0}
 --- !u!82 &963194229
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1944,12 +1972,12 @@ PrefabInstance:
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.337
       objectReference: {fileID: 0}
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.7
+      value: -0.893
       objectReference: {fileID: 0}
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
@@ -1999,7 +2027,7 @@ PrefabInstance:
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5785536104577479200, guid: de316412a4872c44886633104f23696a,
         type: 3}
@@ -2141,7 +2169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: 
-  tablePosition: {fileID: 268309975}
+  tablePosition: {fileID: 0}
   colour: 1
   number: 1
 --- !u!65 &1930164487
@@ -2221,7 +2249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: 
-  tablePosition: {fileID: 1656552942}
+  tablePosition: {fileID: 0}
   colour: 0
   number: 5
 --- !u!65 &2117036224
