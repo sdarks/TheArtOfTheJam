@@ -46,6 +46,7 @@ public class RoomStateManager : MonoBehaviour
 
 	public void SetPlayReverse(bool reverse)
 	{
+		PlayRenderer.enabled = true;
 		PlayRenderer.sprite = reverse ? ReverseSprite : PlaySprite;
 	}
 
