@@ -11,8 +11,13 @@
     
     private bool ascending = true;
     
-    private string machineCColour;
-    private int machineCMode;
+    private string machineCColour = "";
+    private int machineCNumber = 0;
+    
+    private int machineCMode = 1;
+
+    
+    
     // 0 - Colour mode
     // 1 - Number mode
 
@@ -122,6 +127,7 @@
             case "machineB":
                 if(cardColour == "red") machineStatusMap["machineB"] = false;
                 responseType = PuzzleManagerResponse.Type.Delete;
+                machineStatusMap["machineC"] = true;
                 break;
             case "machineC":
                 responseType = PuzzleManagerResponse.Type.Change;
@@ -129,16 +135,26 @@
                 switch (machineCMode)
                 {
                     case 1:
-                        if (lastColour == "") return new PuzzleManagerResponse(PuzzleManagerResponse.Type.Fail);
-                        else changeMap["colour"] = lastColour;
+                        if (machineCColour == "") return new PuzzleManagerResponse(PuzzleManagerResponse.Type.Fail);
+                        else
+                        {
+                            changeMap["colour"] = machineCColour; 
+                            machineCColour = "";
+                            machineCNumber = 0;
+                        }
                         break;
                     case 2:
-                        if (lastNumber == 0) return new PuzzleManagerResponse(PuzzleManagerResponse.Type.Fail);
-                        else changeMap["number"] = lastNumber.ToString();
+                        if (machineCNumber == 0) return new PuzzleManagerResponse(PuzzleManagerResponse.Type.Fail);
+                        else
+                        {
+                            changeMap["number"] = machineCNumber.ToString();
+                            machineCColour = "";
+                            machineCNumber = 0;
+                        }
                         break;
                 }
                
-                
+                machineStatusMap["machineC"] = false;
                 break;
         }
 
@@ -148,6 +164,12 @@
         if (cardColour != "white") lastColour = cardColour;
         
         lastCard = card;
+
+        if (machineName != "machineC")
+        {
+            if(cardColour!="white") machineCColour = cardColour;
+            if (card.properties.ContainsKey("number")) machineCNumber = Int32.Parse(card.properties["number"]);
+        }
 
         if (responseType == PuzzleManagerResponse.Type.Change) return new PuzzleManagerResponse(responseType, changeMap);
         else return new PuzzleManagerResponse(responseType);
