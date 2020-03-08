@@ -17,6 +17,9 @@ public class RoomStateManager : MonoBehaviour
 	public AudioClip MouseUpSound;
 	public AudioClip MouseDownSound;
 
+	public SpriteRenderer PlayRenderer;
+	public Sprite PlaySprite;
+	public Sprite ReverseSprite;
 
 	public float BuzzDelay = 0.5f;
 	IEnumerator BuzzAfterTime(float time, Buzzer buzz)
@@ -37,8 +40,14 @@ public class RoomStateManager : MonoBehaviour
 			Destroy(this);
 			Debug.LogError("Multiple RoomStateManager detected, deleting the newest");
 		}
+
+		
 	}
 
+	public void SetPlayReverse(bool reverse)
+	{
+		PlayRenderer.sprite = reverse ? ReverseSprite : PlaySprite;
+	}
 
 	public void ResetLevel()
 	{
