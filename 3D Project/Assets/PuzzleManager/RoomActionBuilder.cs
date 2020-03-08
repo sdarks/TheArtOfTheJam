@@ -19,7 +19,7 @@ public class RoomActionBuilder
     public RoomAction build()
     {
         RoomAction a = new RoomAction(objects, action);
-        objects.Clear();
+        objects = new List<RoomObject>();
         action = "";
         return a;
     }

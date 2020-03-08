@@ -23,10 +23,10 @@ public class PuzzleManagerMono : MonoBehaviour
 
     void Start()
     {
-        Level level = Levels.GetLevel(levelNumber);
+       // Level level = Levels.GetLevel(levelNumber);
 
         // Puzzle objectives are ready
-        puzzleManager = new PuzzleManager(level.objectives);
+        puzzleManager = new PuzzleManager();
 
         // Create our RoomObjects now
 

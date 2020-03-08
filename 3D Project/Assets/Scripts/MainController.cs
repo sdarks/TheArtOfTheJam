@@ -30,14 +30,20 @@ public class MainController : MonoBehaviour
             {
                 if (heldCard.cardReceiver != null)
                 {
-                    heldCard.cardReceiver.receiveCard(heldCard);
+                    bool input = heldCard.cardReceiver.receiveCard(heldCard);
+                    if (input)
+                    {
+                        GameObject.Destroy(heldCard.gameObject);
+                    }
+                    else
+                    {
+                        RoomStateManager.inst.invalidAction();
+                        releaseCard();
+                    }
                 }
                 else
                 {
-                    heldCard.transform.position = heldCard.tablePosition.transform.position;
-                    heldCard.transform.eulerAngles = new Vector3(90, 0, 90);
-                    heldCard.GetComponent<BoxCollider>().enabled = true;
-                    heldCard = null;
+                    releaseCard();
                 }
             }
             else if (heldCard.cardReceiver != null)
@@ -62,12 +68,20 @@ public class MainController : MonoBehaviour
 
     }
 
+    public void releaseCard()
+    {
+        heldCard.transform.position = heldCard.tablePosition.transform.position;
+        heldCard.transform.eulerAngles = new Vector3(90, 0, 90);
+        heldCard.Collider.enabled = true;
+        heldCard = null;
+    }
+
     public void holdCard(Card c)
     {
         if (heldCard == null)
         {
             heldCard = c;
-            heldCard.GetComponent<BoxCollider>().enabled = false;
+            heldCard.Collider.enabled = false;
         }
         else
         {

@@ -54,7 +54,7 @@ internal class Program
         // node = new PuzzleNode(null, node, action2);
         // objectives.Add(node);
 
-        PuzzleManager manager = new PuzzleManager(objectives);
+        PuzzleManager manager = new PuzzleManager();
 
     }
 }

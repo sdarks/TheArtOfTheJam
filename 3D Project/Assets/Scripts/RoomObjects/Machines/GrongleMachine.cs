@@ -23,7 +23,7 @@ public class GrongleMachine : MonoBehaviour, MachineInterface
             RoomObject cardToProcess = objectBuilder.addProperty("type", "card").addProperty("colour", c.colour.ToString()).build();
 
             RoomAction placeCardIntoGrongleMachine = actionBuilder.addObject(cardToProcess).addObject(grongleMachine).setAction("put in").build();
-            if (c.colour == Color.green)
+            if (true)
             {
                 PuzzleManagerMono.inst.puzzleManager.parseAction(placeCardIntoGrongleMachine);
                 //Debug.Log("Grongle Machine activated!");

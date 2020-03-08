@@ -2,8 +2,8 @@
 
 public class RoomAction
 {
-    private List<RoomObject> objects;
-    private string actionType;
+    public List<RoomObject> objects;
+    public string actionType;
 
     public RoomAction(List<RoomObject> objects, string actionType)
     {

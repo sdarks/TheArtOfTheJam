@@ -7,35 +7,27 @@ using UnityEngine.Experimental.TerrainAPI;
 public class Card : MonoBehaviour
 {
     public string cardName;
-    public Color colour = Color.white;
     public GameObject tablePosition;
     public CardReceiver cardReceiver;
+    public Colour colour;
+    public int number = 0;
+    private BoxCollider collider;
 
-    void Init(string cardName, Color colour)
+    public BoxCollider Collider
     {
-        this.cardName = cardName;
-        this.colour = colour;
-
-        GetComponentInChildren<SpriteRenderer>().color = colour;
+        get => collider;
     }
+
+    public enum Colour
+    {
+        green,
+        red,
+        white
+    };
 
     private void Awake()
     {
         this.transform.position = tablePosition.transform.position;
+        collider = GetComponent<BoxCollider>();
     }
-
-    void Update()
-    {
-        // if (Input.GetMouseButtonDown(0))
-        // {
-        //     RaycastHit hit;
-        //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //
-        //     if (Physics.Raycast(ray, out hit))
-        //     {
-        //         MainController.controller.holdCard((Card) hit.collider.gameObject.GetComponent<Card>());
-        //     }
-        // } 
-    }
-
 }
