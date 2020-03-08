@@ -150,10 +150,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 9174475110863929625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 131820034faea334a9697ab4067087e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 937d55b5be2f3194fbf72717f91d7e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: 
   tablePosition: {fileID: 0}
-  colour: 2
+  colour: 0
   number: 0
