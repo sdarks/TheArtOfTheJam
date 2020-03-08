@@ -15,14 +15,19 @@ public class Buzzer : MonoBehaviour
     
     private DateTime timeOfBuzz;
 
-    private SpriteRenderer renderer;
+    public SpriteRenderer renderer;
 
     private Sprite normalSprite;
     public Sprite buzzSprite;
 
-    void Awake()
+
+	public AudioClip BuzzerSound;
+
+
+	void Awake()
     {
-        renderer = GetComponent<SpriteRenderer>();
+		if(!renderer)
+			renderer = GetComponent<SpriteRenderer>();
         normalSprite = renderer.sprite;
     }
 
@@ -66,6 +71,9 @@ public class Buzzer : MonoBehaviour
         totalBuzzCounter = 0;
         buzzing = false;
         buzzOn = true;
+
+		RoomStateManager.inst.CameraAudio.PlayOneShot(BuzzerSound);
+	
     }
 
 }

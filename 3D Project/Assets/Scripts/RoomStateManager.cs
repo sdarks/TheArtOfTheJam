@@ -9,7 +9,22 @@ public class RoomStateManager : MonoBehaviour
 
 	public Buzzer failBuzzer;
 	public Buzzer goodBuzzer;
-	
+
+	public AudioSource CameraAudio;
+
+	public AudioClip CardInsertSound;
+	public AudioClip MouseUpSound;
+	public AudioClip MouseDownSound;
+
+
+	public float BuzzDelay = 0.5f;
+	IEnumerator BuzzAfterTime(float time, Buzzer buzz)
+	{
+		yield return new WaitForSeconds(time);
+
+		buzz.startBuzz();
+
+	}
 	private void Awake()
 	{
 		if(inst == null)
@@ -29,9 +44,29 @@ public class RoomStateManager : MonoBehaviour
         
     }
 
+	public void PlayMouseDownSound()
+	{
+		CameraAudio.PlayOneShot(MouseDownSound);
+	}
+
+	public void PlayMouseUpSound()
+	{
+		CameraAudio.PlayOneShot(MouseUpSound);
+	}
+
+	public void InsertCardSound()
+	{
+		CameraAudio.PlayOneShot(CardInsertSound);
+	}
+
+	public void GoodAction()
+	{
+		StartCoroutine(BuzzAfterTime(BuzzDelay, goodBuzzer));
+	}
+
 	public void invalidAction()
 	{
-		failBuzzer.startBuzz();
+		StartCoroutine(BuzzAfterTime(BuzzDelay, failBuzzer));
 	}
 	// Update is called once per frame
     void Update()
