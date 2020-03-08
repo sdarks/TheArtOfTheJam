@@ -77,6 +77,8 @@ MonoBehaviour:
   goodBuzzer: {fileID: 1030460965}
   CameraAudio: {fileID: 0}
   CardInsertSound: {fileID: 8300000, guid: fc348495cf2e4ea4d8c0e368a045c22c, type: 3}
+  MouseUpSound: {fileID: 8300000, guid: 4a6403b86340faf4ca88debed80e5fbe, type: 3}
+  MouseDownSound: {fileID: 8300000, guid: 60518f89c3122e54ab83940b94eccb20, type: 3}
   BuzzDelay: 1
 --- !u!114 &2920850238874992500
 MonoBehaviour:

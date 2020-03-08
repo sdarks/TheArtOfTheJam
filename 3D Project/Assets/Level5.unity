@@ -596,16 +596,6 @@ PrefabInstance:
       propertyPath: CameraAudio
       value: 
       objectReference: {fileID: 963194229}
-    - target: {fileID: 1883777298143631668, guid: 0e23f872772560c4c8f2891349c2b759,
-        type: 3}
-      propertyPath: MouseUpSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 4a6403b86340faf4ca88debed80e5fbe, type: 3}
-    - target: {fileID: 1883777298143631668, guid: 0e23f872772560c4c8f2891349c2b759,
-        type: 3}
-      propertyPath: MouseDownSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 60518f89c3122e54ab83940b94eccb20, type: 3}
     - target: {fileID: 2414184325733897622, guid: 0e23f872772560c4c8f2891349c2b759,
         type: 3}
       propertyPath: m_LocalPosition.x
