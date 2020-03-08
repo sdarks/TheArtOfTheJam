@@ -79,6 +79,9 @@ MonoBehaviour:
   CardInsertSound: {fileID: 0}
   MouseUpSound: {fileID: 0}
   MouseDownSound: {fileID: 0}
+  PlayRenderer: {fileID: 0}
+  PlaySprite: {fileID: 21300000, guid: 2c3f6d97ce971844d9d3c98f5d1f6618, type: 3}
+  ReverseSprite: {fileID: 21300000, guid: d2405205ff1e80641aa985f2e632753d, type: 3}
   BuzzDelay: 0.5
 --- !u!114 &2920850238874992500
 MonoBehaviour:
