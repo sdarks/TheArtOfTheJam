@@ -15,7 +15,8 @@ public class MainController : MonoBehaviour
 
     public List<Sprite> cardSprites;
 
-
+    private List<Card> cards = new List<Card>();
+    
     public void Awake()
     {
         if (controller == null)
@@ -34,9 +35,11 @@ public class MainController : MonoBehaviour
             cardMap[pos] = null;
         }
 
-        foreach (Card card in GetComponents<Card>())
+        foreach(GameObject o in GameObject.FindGameObjectsWithTag("Card"))
         {
-            cardMap[card.tablePosition] = card;
+            Card c = o.GetComponent<Card>();
+            cards.Add(c);
+            cardMap[c.tablePosition] = c;
         }
 
         Card.colourMap["red"] = Color.red;
@@ -111,18 +114,21 @@ public class MainController : MonoBehaviour
             {
                 cardMap[c] = card;
                 card.tablePosition = c;
+                break;
             }
         }
     }
 
     public void changeCard(Card card, CardReceiver receiver, PuzzleManagerResponse response)
     {
+        cardMap[card.tablePosition] = null;
         card.tablePosition = null;
+        
         card.CardOutputter = receiver.gameObject.GetComponent<CardOutputter>();
         if (card.CardOutputter)
         {
-            card.transform.position = card.CardOutputter.transform.position+card.CardOutputter.cardPosition;
-            card.transform.eulerAngles = new Vector3(90, 0, 90);
+            card.transform.position = card.CardOutputter.transform.position + card.CardOutputter.cardPosition;
+            card.transform.eulerAngles = new Vector3(90, 0, 0);
             card.Collider.enabled = true;
             heldCard = null;
         }
