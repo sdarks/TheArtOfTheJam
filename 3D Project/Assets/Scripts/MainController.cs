@@ -22,7 +22,8 @@ public class MainController : MonoBehaviour
         else
         {
             Destroy(this);
-            Debug.Log("Error: MainController created while MainController.controller was not null. Deleting this instance.");
+            Debug.Log(
+                "Error: MainController created while MainController.controller was not null. Deleting this instance.");
         }
 
         cardPositions.Capacity = 10;
@@ -37,6 +38,10 @@ public class MainController : MonoBehaviour
             cardMap[card.tablePosition] = card;
         }
 
+        Card.colourMap["red"] = Color.red;
+        Card.colourMap["green"] = Color.green;
+        Card.colourMap["white"] = Color.white;
+
     }
 
     public void Update(){
@@ -44,10 +49,8 @@ public class MainController : MonoBehaviour
         
         if ((heldCard != null) && (heldCard.CardOutputter == null))
         {
-
             if (!Input.GetMouseButton(0))
             {
-
                 if (heldCard.CardReceiver != null)
                 {
                     PuzzleManagerResponse response = heldCard.CardReceiver.receiveCard(heldCard);
@@ -68,7 +71,6 @@ public class MainController : MonoBehaviour
                             Debug.Log("Error action type received, most likely occurs if a card is released into a non-machine type Card Receiver.");
                             break;
                     }
-
                 }
                 else
                 {
@@ -111,7 +113,8 @@ public class MainController : MonoBehaviour
 
     public void changeCard(Card card, CardReceiver receiver, PuzzleManagerResponse response)
     {
-        
+        card.tablePosition = null;
+        card.CardOutputter = receiver.gameObject.GetComponent<CardOutputter>();
     }
 
     public void releaseCard()
