@@ -1092,6 +1092,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1878688952, guid: 4939d2dc319250e4086ff1053d1d904f, type: 3}
+      propertyPath: BuzzerSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 522b6f1c42d09e34b8194248fa3ac2f7, type: 3}
     - target: {fileID: 780033243066957868, guid: 4939d2dc319250e4086ff1053d1d904f,
         type: 3}
       propertyPath: goodBuzzer
