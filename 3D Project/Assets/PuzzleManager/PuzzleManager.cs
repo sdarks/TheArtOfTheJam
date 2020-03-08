@@ -120,6 +120,7 @@
                 if (cardColour == "green")
                 {
                     @ascending = !@ascending;
+                    //RoomStateManager.inst.SetPlayReverse(@ascending);
                 }
                 machineStatusMap["machineB"] = true;
                 responseType = PuzzleManagerResponse.Type.Delete;
