@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -6,6 +8,10 @@ public class MainController : MonoBehaviour
 {
     public static MainController controller;
     public Card heldCard;
+
+    private List<CardPosition> cardPositions = new List<CardPosition>();
+
+    private Dictionary<CardPosition, Card> cardMap;
 
     public void Awake()
     {
@@ -18,40 +24,63 @@ public class MainController : MonoBehaviour
             Destroy(this);
             Debug.Log("Error: MainController created while MainController.controller was not null. Deleting this instance.");
         }
+
+        cardPositions.Capacity = 10;
+        foreach (CardPosition pos in GetComponents<CardPosition>())
+        {
+            cardPositions[pos.index] = pos;
+            cardMap[pos] = null;
+        }
+
+        foreach (Card card in GetComponents<Card>())
+        {
+            cardMap[card.tablePosition] = card;
+        }
+
     }
 
     public void Update(){
         
         
-        if (heldCard != null)
+        if ((heldCard != null) && (heldCard.CardOutputter == null))
         {
 
             if (!Input.GetMouseButton(0))
             {
-                if (heldCard.cardReceiver != null)
+
+                if (heldCard.CardReceiver != null)
                 {
-                    bool input = heldCard.cardReceiver.receiveCard(heldCard);
-                    if (input)
+                    PuzzleManagerResponse response = heldCard.CardReceiver.receiveCard(heldCard);
+
+                    switch (response.ResponseType)
                     {
-                        GameObject.Destroy(heldCard.gameObject);
+                        case PuzzleManagerResponse.Type.Delete:
+                            GameObject.Destroy(heldCard.gameObject);
+                            break;
+                        case PuzzleManagerResponse.Type.Change:
+                            changeCard(heldCard, heldCard.CardReceiver, response);
+                            break;
+                        case PuzzleManagerResponse.Type.Fail:
+                            RoomStateManager.inst.invalidAction();
+                            releaseCard();
+                            break;
+                        case PuzzleManagerResponse.Type.Error:
+                            Debug.Log("Error action type received, most likely occurs if a card is released into a non-machine type Card Receiver.");
+                            break;
                     }
-                    else
-                    {
-                        RoomStateManager.inst.invalidAction();
-                        releaseCard();
-                    }
+
                 }
                 else
                 {
                     releaseCard();
                 }
             }
-            else if (heldCard.cardReceiver != null)
+            else if (heldCard.CardReceiver != null)
             {
                 var heldCardPosition = heldCard.transform;
                 heldCardPosition.position =
-                    heldCard.cardReceiver.transform.position + heldCard.cardReceiver.cardPosition;
-                heldCardPosition.eulerAngles = heldCard.cardReceiver.cardRotation;
+                    heldCard.CardReceiver.transform.position + heldCard.CardReceiver.cardPosition;
+                heldCardPosition.eulerAngles = heldCard.CardReceiver.cardRotation;
             } 
             else
             {
@@ -66,6 +95,23 @@ public class MainController : MonoBehaviour
         
         
 
+    }
+
+    public void addNewCard(Card card)
+    {
+        foreach (CardPosition c in cardPositions)
+        {
+            if (cardMap[c] == null)
+            {
+                cardMap[c] = card;
+                card.tablePosition = c;
+            }
+        }
+    }
+
+    public void changeCard(Card card, CardReceiver receiver, PuzzleManagerResponse response)
+    {
+        
     }
 
     public void releaseCard()
