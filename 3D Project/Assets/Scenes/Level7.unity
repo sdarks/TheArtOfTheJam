@@ -1108,21 +1108,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: machineC
       objectReference: {fileID: 0}
-    - target: {fileID: 9151437502057230353, guid: 85ea38a05592e2a4e9523c65f0d9aa7f,
-        type: 3}
-      propertyPath: cardPosition.x
-      value: 0.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 9151437502057230353, guid: 85ea38a05592e2a4e9523c65f0d9aa7f,
-        type: 3}
-      propertyPath: cardPosition.y
-      value: -0.458
-      objectReference: {fileID: 0}
-    - target: {fileID: 9151437502057230353, guid: 85ea38a05592e2a4e9523c65f0d9aa7f,
-        type: 3}
-      propertyPath: cardPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ea38a05592e2a4e9523c65f0d9aa7f, type: 3}
 --- !u!1 &2118845247
