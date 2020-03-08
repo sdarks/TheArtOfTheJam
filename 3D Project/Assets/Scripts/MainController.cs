@@ -11,7 +11,7 @@ public class MainController : MonoBehaviour
 
     public List<CardPosition> cardPositions = new List<CardPosition>();
 
-    private Dictionary<CardPosition, Card> cardMap;
+    private Dictionary<CardPosition, Card> cardMap = new Dictionary<CardPosition, Card>();
 
     public List<Sprite> cardSprites;
 
