@@ -15,7 +15,7 @@ public class RoomObjectBuilder
     public RoomObject build()
     {
         RoomObject o = new RoomObject(objectProperties);
-        objectProperties.Clear();
+        objectProperties = new Dictionary<string, string>();
         return o;
     }
 

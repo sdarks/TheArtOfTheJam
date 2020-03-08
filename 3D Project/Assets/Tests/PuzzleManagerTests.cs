@@ -29,7 +29,7 @@ namespace Tests
             objectives.Add(objective);
 
 
-            PuzzleManager manager = new PuzzleManager(objectives);
+            PuzzleManager manager = new PuzzleManager();
             // Setup is now complete
             // Now lets try running a single action
 
@@ -67,7 +67,7 @@ namespace Tests
             PuzzleNode createBlueCardObjective = new PuzzleNode(null, copyBlueCardObjective, placeGreenCardIntoColourMachine, ObjectiveType.Good);
             objectives.Add(createBlueCardObjective);
 
-            PuzzleManager manager = new PuzzleManager(objectives);
+            PuzzleManager manager = new PuzzleManager();
             // Setup is now complete
 
             // Objective should start false
