@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2414184325733897622}
   - component: {fileID: 9044441621173772761}
   - component: {fileID: 7236326600032085452}
+  - component: {fileID: 599079997520494127}
+  - component: {fileID: 3870238377865799281}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6739948859533133081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.64800704, y: 3.1306484, z: -1.155845}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -41,25 +43,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6739948859533133081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac5c5ba9a593d74e9b745850d5d4d6e, type: 3}
+  m_Script: {fileID: 11500000, guid: c9c7b6b8342ac5c4f861ec1e3954c567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GreenButton: {fileID: 0}
-  RedButton: {fileID: 0}
-  GreenButtonOn: {fileID: 0}
-  GreenButtonOff: {fileID: 0}
-  RedButtonOn: {fileID: 0}
-  RedButtonOff: {fileID: 0}
-  SecondsToFlashGreenButton: 0
-  SecondsToFlashRedButton: 0
-  ProgressBlobs: []
-  ProgressBlobOnSprites: []
-  ProgressBlobOffSprites: []
-  IncrementProgressOnSuccess: 1
-  DecrementProgressOnFail: 1
-  ResetProgressOnFail: 1
-  FlashLightOnSuccess: 1
-  FlashLightOnFail: 1
+  levelNumber: 0
 --- !u!114 &7236326600032085452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +56,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 6739948859533133081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0a62cb1bf78ccd458fe18fc035f38d1, type: 3}
+  m_Script: {fileID: 11500000, guid: f70a1104f09be26479371111056aff30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNumber: 0
+  failBuzzer: {fileID: 0}
+  goodBuzzer: {fileID: 0}
+--- !u!114 &599079997520494127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739948859533133081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f18db9288184a4ba301253105fa51f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heldCard: {fileID: 0}
+--- !u!114 &3870238377865799281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739948859533133081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e333df4e6486ec44fa923ddc239872b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
