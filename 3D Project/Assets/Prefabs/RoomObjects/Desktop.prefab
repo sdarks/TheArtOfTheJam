@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151415968361816542}
+  - component: {fileID: 1512309138118507938}
   m_Layer: 0
   m_Name: CardPosition4
   m_TagString: Untagged
@@ -30,6 +31,19 @@ Transform:
   m_Father: {fileID: 1151415969500286685}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1512309138118507938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151415968361816529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c8fceb6f6344e9a21d38bbf5d23aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 3
 --- !u!1 &1151415968471872440
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,6 +53,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151415968471872441}
+  - component: {fileID: 5114109636690977784}
   m_Layer: 0
   m_Name: CardPosition2
   m_TagString: Untagged
@@ -60,6 +75,19 @@ Transform:
   m_Father: {fileID: 1151415969500286685}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5114109636690977784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151415968471872440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c8fceb6f6344e9a21d38bbf5d23aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 1
 --- !u!1 &1151415968727309662
 GameObject:
   m_ObjectHideFlags: 0
@@ -69,6 +97,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151415968727309663}
+  - component: {fileID: 1166143285629972210}
   m_Layer: 0
   m_Name: CardPosition5
   m_TagString: Untagged
@@ -90,6 +119,19 @@ Transform:
   m_Father: {fileID: 1151415969500286685}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1166143285629972210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151415968727309662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c8fceb6f6344e9a21d38bbf5d23aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 4
 --- !u!1 &1151415968946365984
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,6 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151415968946365985}
+  - component: {fileID: 773591321658594411}
   m_Layer: 0
   m_Name: CardPosition1
   m_TagString: Untagged
@@ -120,6 +163,19 @@ Transform:
   m_Father: {fileID: 1151415969500286685}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &773591321658594411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151415968946365984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c8fceb6f6344e9a21d38bbf5d23aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
 --- !u!1 &1151415969021052018
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151415969021052019}
+  - component: {fileID: 1223782230849517729}
   m_Layer: 0
   m_Name: CardPosition10
   m_TagString: Untagged
@@ -150,6 +207,19 @@ Transform:
   m_Father: {fileID: 1151415969500286685}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1223782230849517729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151415969021052018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c8fceb6f6344e9a21d38bbf5d23aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 9
 --- !u!1 &1151415969029081594
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151415969029081595}
+  - component: {fileID: 1596321952197342812}
   m_Layer: 0
   m_Name: CardPosition8
   m_TagString: Untagged
@@ -180,6 +251,19 @@ Transform:
   m_Father: {fileID: 1151415969500286685}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1596321952197342812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151415969029081594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c8fceb6f6344e9a21d38bbf5d23aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 7
 --- !u!1 &1151415969208984455
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151415969208984452}
+  - component: {fileID: 4308008658044103098}
   m_Layer: 0
   m_Name: CardPosition6
   m_TagString: Untagged
@@ -210,6 +295,19 @@ Transform:
   m_Father: {fileID: 1151415969500286685}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4308008658044103098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151415969208984455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c8fceb6f6344e9a21d38bbf5d23aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 5
 --- !u!1 &1151415969407664797
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,6 +317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151415969407664794}
+  - component: {fileID: 8164700807439201065}
   m_Layer: 0
   m_Name: CardPosition9
   m_TagString: Untagged
@@ -240,6 +339,19 @@ Transform:
   m_Father: {fileID: 1151415969500286685}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8164700807439201065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151415969407664797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c8fceb6f6344e9a21d38bbf5d23aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 8
 --- !u!1 &1151415969500286673
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151415969968853085}
+  - component: {fileID: 6847363112855999636}
   m_Layer: 0
   m_Name: CardPosition7
   m_TagString: Untagged
@@ -361,6 +474,19 @@ Transform:
   m_Father: {fileID: 1151415969500286685}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6847363112855999636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151415969968853084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c8fceb6f6344e9a21d38bbf5d23aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 6
 --- !u!1 &1151415970052033000
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151415970052033001}
+  - component: {fileID: 415363158676970504}
   m_Layer: 0
   m_Name: CardPosition3
   m_TagString: Untagged
@@ -391,3 +518,16 @@ Transform:
   m_Father: {fileID: 1151415969500286685}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &415363158676970504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151415970052033000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c8fceb6f6344e9a21d38bbf5d23aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 2
