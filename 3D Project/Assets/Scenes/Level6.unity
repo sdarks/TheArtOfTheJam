@@ -1185,6 +1185,11 @@ PrefabInstance:
       propertyPath: goodBuzzer
       value: 
       objectReference: {fileID: 1878688952}
+    - target: {fileID: 3502893713226932478, guid: 4939d2dc319250e4086ff1053d1d904f,
+        type: 3}
+      propertyPath: nextLevelName
+      value: Level7
+      objectReference: {fileID: 0}
     - target: {fileID: 5994965144645559745, guid: 4939d2dc319250e4086ff1053d1d904f,
         type: 3}
       propertyPath: m_LocalPosition.x
