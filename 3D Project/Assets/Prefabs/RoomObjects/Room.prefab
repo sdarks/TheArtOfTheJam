@@ -72,6 +72,11 @@ PrefabInstance:
       propertyPath: CameraAudio
       value: 
       objectReference: {fileID: 920882448366485683}
+    - target: {fileID: 1883777298143631668, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: PlayRenderer
+      value: 
+      objectReference: {fileID: 6301133186062958224}
     - target: {fileID: 2414184325733897622, guid: 0e23f872772560c4c8f2891349c2b759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -637,6 +642,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef982ca74e85e06408925d95a319cd4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &6301133186062958224 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1738784589756672104, guid: c45aea4b9aaccda4990bcffcbd04eabb,
+    type: 3}
+  m_PrefabInstance: {fileID: 5716044706864666360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5852891620992746122
 PrefabInstance:
   m_ObjectHideFlags: 0
