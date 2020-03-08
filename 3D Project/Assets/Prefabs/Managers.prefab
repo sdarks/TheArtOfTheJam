@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7236326600032085452}
   - component: {fileID: 1883777298143631668}
   - component: {fileID: 2920850238874992500}
+  - component: {fileID: 5078121489166590869}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -86,3 +87,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heldCard: {fileID: 0}
+  cardSprites:
+  - {fileID: 21300000, guid: a47f8faee18f7564abb1a8e5425847b3, type: 3}
+  - {fileID: 21300000, guid: 9094de039a73e6f48843230424fb7abe, type: 3}
+  - {fileID: 21300000, guid: 072ad0121b5e03b468337f55b4a616ed, type: 3}
+  - {fileID: 21300000, guid: d9bd047ae34cfd24b9a724eab2d500ec, type: 3}
+  - {fileID: 21300000, guid: 6397974119fa5754f8979af20eb8d8ee, type: 3}
+  - {fileID: 21300000, guid: 4e38588f7b792944a87cea73ac6b66e6, type: 3}
+--- !u!114 &5078121489166590869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739948859533133081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e333df4e6486ec44fa923ddc239872b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

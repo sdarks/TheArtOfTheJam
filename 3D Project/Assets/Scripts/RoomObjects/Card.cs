@@ -24,6 +24,7 @@ public class Card : MonoBehaviour
     }
     
     static public Dictionary<string, Color> colourMap = new Dictionary<string, Color>();
+    static public List<Sprite> cardNumberSprites = new List<Sprite>();
 
     public Colour colour;
     public int number = 0;
@@ -60,6 +61,11 @@ public class Card : MonoBehaviour
 
     }
 
+    public void Start()
+    {
+        changeNumberSprite(number);
+    }
+
     private void generateRoomObject()
     {
         RoomObjectBuilder builder = new RoomObjectBuilder();
@@ -69,6 +75,11 @@ public class Card : MonoBehaviour
         if (number > 0) builder.addProperty("number", number.ToString());
 
         roomObject = builder.build();
+    }
+
+    public void changeNumberSprite(int n)
+    {
+        renderer.sprite = cardNumberSprites[n];
     }
 
     public void changeCard(Dictionary<string, string> changeMap)
@@ -87,6 +98,7 @@ public class Card : MonoBehaviour
         if (changeMap.ContainsKey("number"))
         {
             number = Int32.Parse(changeMap["number"]);
+            changeNumberSprite(number);
         }
     }
     

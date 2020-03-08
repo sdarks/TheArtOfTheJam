@@ -13,6 +13,8 @@ public class MainController : MonoBehaviour
 
     private Dictionary<CardPosition, Card> cardMap;
 
+    public List<Sprite> cardSprites;
+
     public void Awake()
     {
         if (controller == null)
@@ -42,6 +44,7 @@ public class MainController : MonoBehaviour
         Card.colourMap["green"] = Color.green;
         Card.colourMap["white"] = Color.white;
 
+        Card.cardNumberSprites = cardSprites;
     }
 
     public void Update(){
