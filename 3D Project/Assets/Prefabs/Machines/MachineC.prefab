@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac5017407d745faac72a3c551ad1f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPosition: {x: 0, y: -1, z: 1}
+  cardPosition: {x: 0, y: -0.8, z: 1}
   cardRotation: {x: 90, y: 90, z: 90}
   objectName: machineC
 --- !u!114 &9151437502057230353
@@ -393,5 +393,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2e6d50196a448dbb9c033d5262cce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPosition: {x: 0.44, y: -0.458, z: 0}
+  cardPosition: {x: 0.3, y: -0.7, z: 0}
   cardRotation: {x: 0, y: 0, z: 0}
