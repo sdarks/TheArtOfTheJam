@@ -26,6 +26,7 @@ public class MouseHandler : UnityEngine.MonoBehaviour
                         MachineButton machineButtonCast = (MachineButton) machineButton;
                         machineButtonCast.on = !machineButtonCast.@on;
                         PuzzleManagerMono.inst.puzzleManager.switchMode(machineButtonCast.on);
+                        machineButtonCast.switchSprite();
                         print(machineButtonCast.on);
                     }
                 }

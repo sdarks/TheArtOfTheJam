@@ -58,6 +58,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   on: 1
+  machine: {fileID: 4592056632590779744}
+  spriteSwitchList:
+  - {fileID: 21300000, guid: 1cd77004bb327964296f8eb8a573e529, type: 3}
+  - {fileID: 21300000, guid: 0b12ecc98c7685047b6e39919658111d, type: 3}
 --- !u!1 &5619624545030522638
 GameObject:
   m_ObjectHideFlags: 0

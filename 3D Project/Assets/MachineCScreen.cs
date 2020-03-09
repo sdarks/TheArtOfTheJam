@@ -65,7 +65,15 @@ public class MachineCScreen : MonoBehaviour
         else
         {
             // Number Mode
-            screenNumber.text = PuzzleManagerMono.inst.puzzleManager.machineCNumberPublic.ToString();
+            if (PuzzleManagerMono.inst.puzzleManager.machineCNumberPublic != 0)
+            {
+                screenNumber.text = PuzzleManagerMono.inst.puzzleManager.machineCNumberPublic.ToString();
+            }
+            else
+            {
+                screenNumber.text = "-";
+            }
+
             screen.color = Color.black;
         }
     }
