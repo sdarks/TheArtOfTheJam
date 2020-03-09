@@ -7,8 +7,10 @@ public class MachineCScreen : MonoBehaviour
     public SpriteRenderer screen;
     public TextMesh screenNumber;
 
-    public Texture2D[] staticTextureArray;
+    public Sprite[] staticTextureArray;
     private int currentTextureNumber;
+
+    public Sprite normalScreenTexture;
 
     void Start()
     {
@@ -26,7 +28,7 @@ public class MachineCScreen : MonoBehaviour
 
         if (staticTextureArray.Length == 0)
         {
-            Debug.LogError("Not enough static textures for MachineCColourScreen!!");
+            Debug.LogError("Not enough static sprites for MachineCColourScreen!!");
             Destroy(this);
         }
     }
@@ -35,9 +37,19 @@ public class MachineCScreen : MonoBehaviour
     void Update()
     {
         // Check if machine is on first
-        if (!PuzzleManagerMono.inst.puzzleManager.machineOn())
+        if (!PuzzleManagerMono.inst.puzzleManager.machineOn("machineC"))
         {
+            screen.gameObject.transform.localScale = new Vector3(2, 2.5f, 1);
             if (currentTextureNumber == staticTextureArray.Length) { currentTextureNumber = 0; }
+            screen.sprite = staticTextureArray[currentTextureNumber];
+            currentTextureNumber++;
+            screen.color = Color.white;
+            return;
+        }
+        else
+        {
+            screen.gameObject.transform.localScale = new Vector3(1, 1, 1);
+            screen.sprite = normalScreenTexture;
         }
 
 

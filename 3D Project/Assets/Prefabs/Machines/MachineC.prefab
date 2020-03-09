@@ -157,16 +157,18 @@ MonoBehaviour:
   screen: {fileID: 817244807288647041}
   screenNumber: {fileID: 497166868275565454}
   staticTextureArray:
-  - {fileID: 2800000, guid: f4f5495d23c30674ca5867c6e4e263fc, type: 3}
-  - {fileID: 2800000, guid: 363ab7a1bf917e34abb9886ac644ff91, type: 3}
-  - {fileID: 2800000, guid: b02abbb078edbf64aa1ea7e88c0ac006, type: 3}
-  - {fileID: 2800000, guid: 285897c703eb85f4093a0a5f56f03d37, type: 3}
-  - {fileID: 2800000, guid: bdf3d7d733afdab40841b234b0fca2a0, type: 3}
-  - {fileID: 2800000, guid: 3fc93a7ed134c62409fc005591b4a28b, type: 3}
-  - {fileID: 2800000, guid: 618ac6a6a8837904daf8c325e90f0b70, type: 3}
-  - {fileID: 2800000, guid: a2f1f6cc09dddb24ea79bdd26d3b4979, type: 3}
-  - {fileID: 2800000, guid: 1bab7bb54a98f1a41bbf68ef409cb2cc, type: 3}
-  - {fileID: 2800000, guid: 20f2e6e870f426c4f892be89dc8a1204, type: 3}
+  - {fileID: 21300000, guid: f4f5495d23c30674ca5867c6e4e263fc, type: 3}
+  - {fileID: 21300000, guid: 363ab7a1bf917e34abb9886ac644ff91, type: 3}
+  - {fileID: 21300000, guid: b02abbb078edbf64aa1ea7e88c0ac006, type: 3}
+  - {fileID: 21300000, guid: 285897c703eb85f4093a0a5f56f03d37, type: 3}
+  - {fileID: 21300000, guid: bdf3d7d733afdab40841b234b0fca2a0, type: 3}
+  - {fileID: 21300000, guid: 3fc93a7ed134c62409fc005591b4a28b, type: 3}
+  - {fileID: 21300000, guid: 618ac6a6a8837904daf8c325e90f0b70, type: 3}
+  - {fileID: 21300000, guid: a2f1f6cc09dddb24ea79bdd26d3b4979, type: 3}
+  - {fileID: 21300000, guid: 1bab7bb54a98f1a41bbf68ef409cb2cc, type: 3}
+  - {fileID: 21300000, guid: 20f2e6e870f426c4f892be89dc8a1204, type: 3}
+  normalScreenTexture: {fileID: -3379492403191271098, guid: cdf505a984918414ab6ce013afca227b,
+    type: 3}
 --- !u!1 &5873135497006397969
 GameObject:
   m_ObjectHideFlags: 0
