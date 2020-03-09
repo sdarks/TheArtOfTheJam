@@ -172,10 +172,12 @@ public class PuzzleManager
         {
             if (cardColour != "white") machineCColour = cardColour;
             if (card.properties.ContainsKey("number")) machineCNumber = Int32.Parse(card.properties["number"]);
-            
+
             if (card.properties.ContainsKey("number")) lastNumber = Int32.Parse(card.properties["number"]);
             if (cardColour != "white") lastColour = cardColour;
         }
+
+        RoomStateManager.inst.SetNumberDisplay(lastNumber);
 
         if (responseType == PuzzleManagerResponse.Type.Change) return new PuzzleManagerResponse(responseType, changeMap);
         else return new PuzzleManagerResponse(responseType);

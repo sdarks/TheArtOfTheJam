@@ -43,6 +43,7 @@ public class MachineCScreen : MonoBehaviour
             if (currentTextureNumber == staticTextureArray.Length) { currentTextureNumber = 0; }
             screen.sprite = staticTextureArray[currentTextureNumber];
             currentTextureNumber++;
+            screenNumber.text = "";
             screen.color = Color.white;
             return;
         }

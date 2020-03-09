@@ -77,6 +77,11 @@ PrefabInstance:
       propertyPath: PlayRenderer
       value: 
       objectReference: {fileID: 6301133186062958224}
+    - target: {fileID: 1883777298143631668, guid: 0e23f872772560c4c8f2891349c2b759,
+        type: 3}
+      propertyPath: numberDisplay
+      value: 
+      objectReference: {fileID: 8154766948884681409}
     - target: {fileID: 2414184325733897622, guid: 0e23f872772560c4c8f2891349c2b759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -610,6 +615,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4501617439006884921, guid: c45aea4b9aaccda4990bcffcbd04eabb,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c45aea4b9aaccda4990bcffcbd04eabb, type: 3}
 --- !u!4 &7878499502390752081 stripped
@@ -645,6 +655,12 @@ MonoBehaviour:
 --- !u!212 &6301133186062958224 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1738784589756672104, guid: c45aea4b9aaccda4990bcffcbd04eabb,
+    type: 3}
+  m_PrefabInstance: {fileID: 5716044706864666360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!102 &8154766948884681409 stripped
+TextMesh:
+  m_CorrespondingSourceObject: {fileID: 4501617439006884921, guid: c45aea4b9aaccda4990bcffcbd04eabb,
     type: 3}
   m_PrefabInstance: {fileID: 5716044706864666360}
   m_PrefabAsset: {fileID: 0}

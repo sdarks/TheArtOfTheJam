@@ -21,6 +21,8 @@ public class RoomStateManager : MonoBehaviour
     public Sprite PlaySprite;
     public Sprite ReverseSprite;
 
+    public TextMesh numberDisplay;
+
     public float BuzzDelay = 0.5f;
     IEnumerator BuzzAfterTime(float time, Buzzer buzz)
     {
@@ -42,6 +44,11 @@ public class RoomStateManager : MonoBehaviour
         }
 
 
+    }
+
+    public void SetNumberDisplay(int number)
+    {
+        numberDisplay.text = number.ToString();
     }
 
     public void SetPlayReverse(bool reverse)
