@@ -33,6 +33,15 @@ public class MouseHandler : UnityEngine.MonoBehaviour
             }
         }
 
+        if (Input.GetMouseButton(0) && MainController.controller.heldCard != null)
+        {
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.visible = true;
+        }
+
         if (MainController.controller.heldCard != null)
         {
             RaycastHit hit;
